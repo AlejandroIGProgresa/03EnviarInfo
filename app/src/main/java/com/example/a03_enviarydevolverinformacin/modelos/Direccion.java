@@ -2,13 +2,13 @@ package com.example.a03_enviarydevolverinformacin.modelos;
 
 import java.io.Serializable;
 
-public class Dirección implements Serializable {
+public class Direccion implements Serializable {
 
     private String calle;
     private int numero;
     private String ciudad;
 
-    public Dirección(String calle, int numero, String ciudad) {
+    public Direccion(String calle, int numero, String ciudad) {
         this.calle = calle;
         this.numero = numero;
         this.ciudad = ciudad;

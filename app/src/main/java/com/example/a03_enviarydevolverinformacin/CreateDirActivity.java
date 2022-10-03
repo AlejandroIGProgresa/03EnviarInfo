@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.a03_enviarydevolverinformacin.modelos.Dirección;
+import com.example.a03_enviarydevolverinformacin.modelos.Direccion;
 
 public class CreateDirActivity extends AppCompatActivity {
 
@@ -27,16 +27,15 @@ public class CreateDirActivity extends AppCompatActivity {
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Dirección dirección = new Dirección(txtCalle.getText().toString(),
+                Direccion direccion = new Direccion(txtCalle.getText().toString(),
                         Integer.parseInt(txtNumero.getText().toString()), txtCiudad.getText().toString());
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("DIR", dirección);
+                bundle.putSerializable("DIR", direccion);
                 Intent intent = new Intent();
                 intent.putExtras(bundle);
                 setResult(RESULT_OK, intent);
                 finish();
             }
-
         });
     }
 
